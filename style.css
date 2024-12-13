@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+:root{
+    --col1: rgba(11,33,66,1);
+    --col2: rgba(255,255,255,1);
+    --table-col: rgba(150,50,0,.1);
+    --btn-col: rgba(11,33,150,1);
+    
+    --body-font: "Ubuntu", serif;
+    --txt2-font: "Poppins", serif;
+    --menu-font: "Akaya Kanadaka", serif;
+}
+html,body{
+    background: var(--col1);
+    color: var(--col2);
+    font-size: 16px;
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+/*==================================================
+                COMON
+===================================================*/ 
+:is(.menu,.list span,){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+:is(header,.list li,){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+:is(header h2,){
+    text-transform: uppercase;
+}
+:is(.list li,.add-project h2,.add-item h2,.bill,){
+    text-transform: capitalize;
+}
+button{
+    background: var(--btn-col);
+    color: var(--col2);
+    font-family: var(--menu-font);
+    text-transform: capitalize;
+    font-weight: bolder;
+    border: none;
+    padding: .4rem 2rem;
+    border-radius: .2rem;
+}
+.fa-eye{
+    font-weight: bolder;
+    color: indigo;
+}
+.fa-trash-can{
+    font-weight: bolder;
+    color: tomato;
+}
+.fa-pen-to-square {
+    font-weight: bolder;
+    color: indigo;
+    display: none;
+}
+.fa-xmark {
+    color: #fff;
+    font-weight: bolder;
+    border: .1rem solid #fff;
+    border-radius: .2rem;
+    padding: .3rem .3rem .1rem .3rem;
+    margin-bottom: 1.5rem;
+}
+input{
+    width: 100%;
+    text-align: center;
+    padding: .5rem;
+}
+/*==================================================
+                HEADER
+===================================================*/                
+header{
+    padding: 1rem;
+}
+/*==================================================
+                MAIN
+===================================================*/                
+main{
+    width: 100vw;
+    min-height: 90vh;
+    position: relative;
+    overflow-x: hidden;
+}
+/*============POPUP=========*/
+/*============THEMES=========*/
+.theme{
+    width: 5rem;
+    background: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: -5rem;
+    z-index: 9;
+}
+.theme .box{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*============BILL==========*/
+.bill{
+    background: var(--col1);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.bill-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+.bill table{
+    width: 100%;
+    font-size: .5rem;
+    border: .2rem;
+}
+.bill th,td{
+    padding: .3rem;
+    text-align: center;
+}
+/*========ADD PROJECT=======*/
+.add-project,.add-item{
+    background: var(--col1);
+    width: 100vw;
+    min-height: 95vh;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.add-project h2,.add-item h2{
+    text-align: center;
+    padding: 1rem;
+}
+.add-project table,.add-item table{
+    width: 100%;
+    border-radius: .3rem;
+}
+.add-project td,.add-item td{
+    padding: .3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+/*========MENU==========*/
+.menu{}
+/*=========LIST==========*/
+.list{
+    padding: 1.5rem;
+}
+.list li{
+    background: var(--col2);
+    color: var(--col1);
+    width: 100%;
+    border-radius: .3rem;
+    padding: 1rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.list span{gap: 3rem;}
+
+
+@media only screen and (min-width:450px){
+    .bill-info,.bill table,
+    .add-item h2,.add-item table,
+    .add-project h2,.add-project form{
+        width: 600px;
+        margin: auto;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .list li{
+        width: 700px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  
+  <!-----------FONT ASOWAM---------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-----------Google Fonts------------------>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h2>tk furniture</h2>
+        <button onclick="themeList()">theme</button>
+    </header>
+    
+    <main>
+    <!---------POPUP------------>
+        <div class="popup">
+            <div class="theme" style="right:-5rem"></div> 
+            
+            <div class="bill">
+                <div class="bill-info"></div>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>item name</th>
+                            <th>rate</th>
+                            <th>width</th>
+                            <th>height</th>
+                            <th>sqft</th>
+                            <th>qty</th>
+                            <th>price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                    <tfoot class="tfoot"></tfoot>
+                </table>
+                <button style="margin-top: 2rem" onclick="hideBill()">back</button>               
+            </div>
+            
+            <div class="add-project">
+                <h2>project form</h2>
+                <form id="project-form">
+                    <table border="2">
+                        <tr>
+                            <td>project name:</td>
+                            <td><input type="text" name="project_name" required></td>
+                        </tr>
+                        <tr>
+                            <td>company name:</td>
+                            <td><input type="text" name="company_name" placeholder="Tk furniture"></td>
+                        </tr>
+                        <tr>
+                            <td>category:</td>
+                            <td><input type="text" name="category" placeholder="Furniture"></td>
+                        </tr>
+                        <tr>
+                            <td>phone no:</td>
+                            <td><input type="number" name="phone_no" placeholder="8617796858"></td>
+                        </tr>
+                        <tr>
+                            <td>pay:</td>
+                            <td><input type="number" name="pay" placeholder="000/-"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">create</button></td>
+                        </tr>
+                    </table>
+                </form>
+                <button style="margin-top: 2rem" onclick="hideAddProject()">back</button>
+            </div>
+            
+            <div class="add-item"></div>
+        </div>
+    <!------------MENU------------->
+        <div class="menu">
+            <button onclick="showAddProject()">create project</button>             
+            <button>list</button>
+        </div>
+    <!------------LIST--------------->
+        <div class="list">
+            <li>
+                <p>sidha suburiya project</p>
+                <span>
+                    <i class="fa-regular fa-pen-to-square" onclick="showAddItem()"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </span>
+            </li>
+        </div>                                                                             
+    </main>
+    
+    <footer></footer>
+    
+  <script src="main.js"></script>
+</body>
+</html>
